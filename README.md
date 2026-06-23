@@ -110,3 +110,12 @@ documenta en `EVIDENCE.md`.
 - [x] Empaquetado para publicación (licencias, `CITATION.cff`, `.zenodo.json`)
 - [x] Depósito en Zenodo + DOI: [10.5281/zenodo.20806914](https://doi.org/10.5281/zenodo.20806914)
 - [x] Traducción al inglés (`paper/main-en.tex`, ver [README.en.md](README.en.md))
+
+## Versiones
+
+- **v1.1.0** — Versión bilingüe (español + inglés) y renombrado del repositorio.
+- **v1.0.0** — Primera versión pública (solo español).
+
+Cada versión se archiva en Zenodo bajo el mismo *Concept DOI*
+[10.5281/zenodo.20806914](https://doi.org/10.5281/zenodo.20806914), que apunta
+siempre a la última.

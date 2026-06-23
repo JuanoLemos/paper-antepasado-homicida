@@ -95,3 +95,12 @@ documented in `EVIDENCE.md`.
 - [x] Packaging for publication (licences, `CITATION.cff`, `.zenodo.json`)
 - [x] Zenodo deposit + DOI: [10.5281/zenodo.20806914](https://doi.org/10.5281/zenodo.20806914)
 - [x] English translation (`paper/main-en.tex`)
+
+## Versions
+
+- **v1.1.0** — Bilingual version (Spanish + English) and repository rename.
+- **v1.0.0** — First public version (Spanish only).
+
+Each version is archived in Zenodo under the same *Concept DOI*
+[10.5281/zenodo.20806914](https://doi.org/10.5281/zenodo.20806914), which always
+points to the latest.
