@@ -88,7 +88,7 @@ documenta en `EVIDENCE.md`.
 
 ```powershell
 # 1. Crear el repo en GitHub (con gh, o manualmente en github.com)
-#    gh repo create JuanoLemos/paper-antepasado-asesino --public --source . --push
+#    gh repo create JuanoLemos/paper-antepasado-homicida --public --source . --push
 
 # 2. En zenodo.org: iniciar sesión con GitHub y activar el repo
 #    (Settings -> GitHub -> flip ON para este repositorio).
