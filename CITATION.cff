@@ -11,6 +11,7 @@ type: software
 authors:
   - family-names: "Lemos"
     given-names: "Juan Manuel"
+    affiliation: "Investigador independiente"
 version: "1.0.0"
 date-released: "2026-06-22"
 license: CC-BY-4.0

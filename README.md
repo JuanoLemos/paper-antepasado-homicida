@@ -1,5 +1,9 @@
 # Sobre la inevitabilidad de un antepasado homicida
 
+*Paper y código reproducible: por qué es prácticamente imposible no tener un
+antepasado homicida. Argumento genealógico-probabilístico (colapso de pedigrí +
+punto de ancestros idénticos) con simulación Monte Carlo.*
+
 Preprint (estilo arXiv) que formaliza y cuantifica la siguiente afirmación:
 
 > Todo ser humano vivo tiene, con probabilidad esencialmente igual a 1, al menos
@@ -14,6 +18,13 @@ El argumento combina dos hechos:
    años; Rohde, Olson & Chang, 2004), el conjunto de antepasados de cualquier
    persona viva coincide con *toda* la población reproductora global de entonces.
    Basta un solo homicida en ese acervo para que sea ancestro de todos.
+
+Además se analizan **poblaciones aisladas** (islas, fundaciones por pocos
+colonos): el efecto fundador adelanta el IAP (`~1.77·log₂(N_e)` generaciones) y
+se muestra por qué el aislamiento no es una vía de escape a la tesis. También se
+verifica la **robustez al supuesto de independencia**: introduciendo
+heredabilidad/correlación `h` de la violencia (preservando la prevalencia
+marginal), la conclusión se mantiene (apenas retrasa una generación).
 
 ## Estructura
 

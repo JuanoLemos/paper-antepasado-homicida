@@ -60,6 +60,24 @@ def write_iap() -> None:
                 w.writerow([f"{pool:.0f}", p, f"{pr:.12f}"])
 
 
+ISLAND_NE: List[float] = [50.0, 200.0, 1.0e3, 1.0e4, 1.0e6]
+
+
+def write_island() -> None:
+    """Tabla de poblaciones aisladas: generacion del IAP (Chang) y probabilidad
+    de descender de un homicida, en funcion del tamano efectivo Ne."""
+    path = os.path.join(OUT, "table_island.csv")
+    with open(path, "w", newline="", encoding="utf-8") as f:
+        w = csv.writer(f)
+        w.writerow(["Ne", "IAP_generaciones", "P_desc_p_1e-3", "P_desc_p_1e-2"])
+        for Ne in ISLAND_NE:
+            g = model.chang_iap_generations(Ne)
+            p3 = model.prob_descends_from_killer_closed(1.0e-3, Ne)
+            p2 = model.prob_descends_from_killer_closed(1.0e-2, Ne)
+            w.writerow([f"{Ne:.0f}", f"{g:.2f}", f"{p3:.6f}", f"{p2:.6f}"])
+
+
+
 def summary() -> None:
     print("=" * 64)
     print("RESUMEN DE RESULTADOS")
@@ -84,6 +102,15 @@ def summary() -> None:
     for p in IAP_P:
         pr = model.prob_descends_from_killer_iap(p, 5.0e6)
         print(f"  p={p:<7}  P(desciende de homicida) = {pr:.12f}")
+    print()
+    print("Poblaciones aisladas (efecto fundador, IAP ~1.77*log2(Ne)):")
+    for Ne in ISLAND_NE:
+        g = model.chang_iap_generations(Ne)
+        p2 = model.prob_descends_from_killer_closed(1.0e-2, Ne)
+        print(
+            f"  Ne={Ne:>10.0f}  IAP~{g:5.1f} gen (~{g*28:5.0f} anios)"
+            f"  P_desc(p=0.01)={p2:.6f}"
+        )
     print("=" * 64)
 
 
@@ -92,6 +119,7 @@ def main() -> None:
     write_naive()
     write_pedigree()
     write_iap()
+    write_island()
     print(f"CSVs escritos en {OUT}\n")
     summary()
 

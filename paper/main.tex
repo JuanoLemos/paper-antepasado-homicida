@@ -16,7 +16,11 @@
 
 \title{\textbf{Sobre la inevitabilidad de un antepasado homicida:\\
 un argumento geneal\'ogico--probabil\'istico}}
-\author{Juan Manuel Lemos}
+\author{Juan Manuel Lemos\\
+\normalsize Investigador independiente\thanks{Nota del autor: este trabajo nace
+de una indagaci\'on personal movida por la curiosidad; se ofrece como s\'intesis
+rigurosa y reproducible, en esp\'iritu cient\'ifico, sin reclamar credenciales
+acad\'emicas.}}
 \date{\today}
 
 \begin{document}
@@ -277,6 +281,48 @@ positiva tiende a \emph{reforzar} la conclusi\'on (concentra homicidas en
 algunas ramas, pero basta una rama para romper la conjunci\'on), y la simulaci\'on
 con emparejamiento aleatorio ya prescinde de la poblaci\'on infinita.
 
+\paragraph{Heredabilidad y correlaci\'on.} La propensi\'on a la violencia tiene
+un componente hereditario y de transmisi\'on cultural \citep{anholt2012}, lo que
+introduce correlaci\'on entre el estatus de progenitores e hijos. Para evaluar su
+efecto extendemos la simulaci\'on con un par\'ametro $h\in[0,1]$ de transmisi\'on,
+$p_{\text{hijo}} = p + h\,(f-p)$, donde $f$ es la fracci\'on de los dos
+progenitores que fueron homicidas; el modelo \emph{preserva la prevalencia
+marginal} $p$, de modo que compara el caso independiente ($h=0$) con el agrupado
+($h>0$) a igual violencia media. La prevalencia simulada se mantiene en
+$\approx 0{.}010$ para todo $h$ (Tabla~\ref{tab:heritability}), y aun con
+$h=0{.}9$ la fracci\'on con antepasado homicida converge a $1$, cruzando $0{.}999$
+en la generaci\'on~$10$ frente a la~$9$ del caso independiente
+(Fig.~\ref{fig:heritability}). Es decir, la correlaci\'on apenas retrasa el
+fen\'omeno en una generaci\'on y no altera la conclusi\'on: la tesis es robusta al
+supuesto de independencia.
+
+\begin{table}[h]
+\centering
+\caption{Robustez a la independencia (Monte Carlo, $p=0{.}01$, $M=2\,000$,
+$40$ r\'eplicas). $h$ es la heredabilidad/transmisi\'on; la prevalencia marginal
+se preserva.}
+\label{tab:heritability}
+\begin{tabular}{cccc}
+\toprule
+$h$ & prevalencia & gen.\ con frac.\ $\ge 0{.}999$ & fracci\'on (gen.\ 29) \\
+\midrule
+$0{.}0$ & $0{.}010$ & $9$  & $1{.}000$ \\
+$0{.}3$ & $0{.}010$ & $9$  & $1{.}000$ \\
+$0{.}6$ & $0{.}010$ & $10$ & $1{.}000$ \\
+$0{.}9$ & $0{.}010$ & $10$ & $1{.}000$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.72\textwidth]{fig_heritability.pdf}
+\caption{Robustez a la independencia: fracci\'on con antepasado homicida por
+generaci\'on para distintos niveles de heredabilidad/correlaci\'on $h$, a
+prevalencia marginal fija $p=0{.}01$. Las curvas son casi indistinguibles.}
+\label{fig:heritability}
+\end{figure}
+
 \paragraph{Geneal\'ogico vs.\ gen\'etico.} El argumento es \emph{geneal\'ogico}.
 Un antepasado del IAP puede no haber dejado material gen\'etico en \emph{ego}
 \citep{ralph2013}. Esto no afecta la afirmaci\'on sobre descendencia, que es de
@@ -290,6 +336,58 @@ $p$ tan bajos como $10^{-4}$.
 \paragraph{Mezcla poblacional.} El modelo de \citet{rohde2004} asume mezcla
 global, mitigada en la realidad por barreras geogr\'aficas; esto retrasa el IAP
 global pero no lo elimina, y el IAP \emph{regional} es a\'un m\'as reciente.
+
+\paragraph{Poblaciones aisladas.} Cabe preguntarse si una poblaci\'on aislada
+(una isla, un valle remoto, una fundaci\'on por pocos colonos) podr\'ia escapar a
+la conclusi\'on. El an\'alisis muestra lo contrario por tres v\'ias. (i)
+\emph{Efecto fundador}: en una poblaci\'on cerrada bien mezclada de tama\~no
+efectivo $N_e$, el IAP se alcanza en $\approx 1{.}77\,\log_2 N_e$ generaciones
+\citep{chang1999}; para $N_e=50$ son $\sim 10$ generaciones ($\sim 280$ a\~nos),
+frente a $\sim 35$ para $N_e=10^{6}$ (Tabla~\ref{tab:island}, Fig.~\ref{fig:isolation}).
+El aislamiento, pues, \emph{acelera} el colapso de la ascendencia: en una isla
+peque\~na todos comparten muy pronto el mismo acervo de antepasados. (ii)
+\emph{Heterogeneidad de $p$}: algunas sociedades aisladas presentan violencia
+letal muy alta \citep{keeley1996}---el caso (discutido) de los Yanomam\"o reporta
+fracciones elevadas de varones que han matado \citep{chagnon1988}---mientras que
+otras son notablemente pac\'ificas; el aislamiento aumenta la \emph{varianza} de
+$p$, no necesariamente su media. (iii) \emph{No es una v\'ia de escape}: aun en el
+caso l\'imite de un peque\~no aislado pac\'ifico, donde el acervo cerrado por
+s\'i solo no garantiza un homicida (p.\,ej.\ $N_e=50$, $p=10^{-3}$ da
+$P_{\text{desc}}\approx 0{.}05$; Tabla~\ref{tab:island}), los \emph{fundadores}
+descienden a su vez de la poblaci\'on continental, cuya ascendencia se conecta con
+el IAP global (Secci\'on~\ref{sec:param}), que s\'i contiene homicidas. El
+aislamiento solo a\~nade un ``tap\'on'' geneal\'ogico reciente; no corta la
+ascendencia profunda, de modo que la certeza se restablece a trav\'es de los
+propios fundadores.
+
+\begin{table}[h]
+\centering
+\caption{Poblaciones aisladas (cerradas): generaci\'on del IAP
+($\approx 1{.}77\log_2 N_e$) y probabilidad de descender de un homicida
+\emph{dentro del acervo aislado}, $P_{\text{desc}}=1-(1-p)^{N_e}$.}
+\label{tab:island}
+\begin{tabular}{rccc}
+\toprule
+$N_e$ & IAP (gen.) & $P_{\text{desc}}\,(p{=}10^{-3})$ & $P_{\text{desc}}\,(p{=}10^{-2})$ \\
+\midrule
+50      & $10{.}0$ & $0{.}049$ & $0{.}395$ \\
+200     & $13{.}5$ & $0{.}181$ & $0{.}866$ \\
+1\,000  & $17{.}6$ & $0{.}632$ & $1{.}000$ \\
+10\,000 & $23{.}5$ & $1{.}000$ & $1{.}000$ \\
+$10^{6}$ & $35{.}3$ & $1{.}000$ & $1{.}000$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.92\textwidth]{fig_isolation.pdf}
+\caption{Poblaciones aisladas. Izquierda: generaci\'on del IAP frente al tama\~no
+efectivo $N_e$ ($\approx 1{.}77\log_2 N_e$). Derecha: fracci\'on con antepasado
+homicida por generaci\'on en poblaciones cerradas de distinto tama\~no $M$
+(efecto fundador, $p=0{.}01$, Monte Carlo).}
+\label{fig:isolation}
+\end{figure}
 
 \paragraph{Posicionamiento y novedad.} Este trabajo no reclama un resultado
 matem\'atico nuevo: es una \emph{s\'intesis} expositiva que combina resultados
@@ -310,6 +408,23 @@ pr\'actica de car\'acter casi deductivo. Por tanto, \emph{es esencialmente
 imposible que un ser humano vivo no descienda de al menos un homicida}. La
 intuici\'on existencial que motiv\'o esta nota queda, as\'i, rigurosamente
 refutada.
+
+\section*{Sobre la naturaleza de los datos}
+\addcontentsline{toc}{section}{Sobre la naturaleza de los datos}
+Este trabajo \emph{no recolecta datos primarios}. Conviene distinguir tres tipos
+de cifras. (i) Los \emph{valores emp\'iricos} (prevalencia de violencia letal,
+horizonte del IAP, tama\~no de la poblaci\'on, longitud generacional, etc.) son
+\emph{secundarios}: provienen de fuentes externas revisadas por pares, citadas en
+el texto y trazadas una a una ---con DOI y cita textual--- en el archivo
+\texttt{EVIDENCE.md} del repositorio. (ii) Los \emph{resultados num\'ericos}
+(tablas, figuras y simulaciones) no dependen de la autoridad del autor sino que
+son \emph{reproducibles}: se obtienen ejecutando el c\'odigo abierto con semillas
+fijas. (iii) El \emph{modelo y sus derivaciones} son verificables por inspecci\'on
+matem\'atica. Adem\'as, los par\'ametros se toman como \'ordenes de magnitud y la
+conclusi\'on es robusta a rangos amplios (Secciones~\ref{sec:param} y
+\ref{sec:disc}), por lo que no depende de ning\'un valor puntual. En consecuencia,
+la verificaci\'on de cualquier afirmaci\'on se remite a su fuente citada o a la
+re-ejecuci\'on del c\'odigo, no al testimonio del autor.
 
 \section*{Reproducibilidad}
 \addcontentsline{toc}{section}{Reproducibilidad}

@@ -13,12 +13,15 @@ Estado Crossref verificado el 2026-06 contra `https://api.crossref.org/works/{do
 | 5 | Longitud generacional media ℓ ≈ 28 años. | Fenner, J. N. (2005), *Am. J. Phys. Anthropol.* 128(2):415–423. | 10.1002/ajpa.20188 | "Cross-cultural estimation of the human generation interval…" (estimación ampliamente citada ≈ 28 años). | OK |
 | 6 | Serie poblacional mundial de largo plazo (10.000 a.C.: ~4 M; 1700: 595 M; 1800: 983 M; 1900: 1,6 mil M; 2022: 8 mil M). | Ritchie et al. (2023), *Our World in Data* — HYDE (2023), Gapminder, UN WPP (2024). | ourworldindata.org/population-growth | "As recently as 12,000 years ago, there were only 4 million people worldwide." Hitos de la serie de largo plazo (CC-BY). | n/a (dataset) |
 | 7 | Distinción ascendencia genealógica vs. genética; multiplicidad de ancestros genealógicos. | Ralph & Coop (2013), *PLoS Biology* 11(5):e1001555. | 10.1371/journal.pbio.1001555 | "for every genetic common ancestor there are tens of millions of genealogical common ancestors […] at least thousands of distinct individuals." | OK |
+| 8 | Efecto fundador: en población cerrada de tamaño N_e el IAP está a ~1.77·log₂(N_e) generaciones. | Chang, J. T. (1999). | 10.1239/aap/1029955256 | Mismo resultado que la fila 3, aplicado a poblaciones aisladas (N_e pequeño → IAP en pocas generaciones). | OK |
+| 9 | Heterogeneidad de la violencia en poblaciones aisladas (alta en algunas, baja en otras). | Keeley (1996); Chagnon (1988) *Science* 239:985–992 (**dato discutido**); Gómez et al. (2016). | 10.1126/science.239.4843.985 | Chagnon reporta alta fracción de varones que han matado entre los Yanomamö; se usa **solo con salvedad** como cota superior ilustrativa, no como ancla. | OK (Chagnon) |
+| 10 | La agresión tiene componente hereditario/genético (sustenta el parámetro de correlación h). | Anholt & Mackay (2012), *Annu. Rev. Genet.* 46:145–164. | 10.1146/annurev-genet-110711-155514 | Revisión sobre la genética de la agresión. La simulación de `h` es un **chequeo de robustez del modelo**, no un dato externo. | OK |
 
 ## Notas de verificación
 
-- **DOIs**: los 5 con DOI (Chang 1999, Rohde-Olson-Chang 2004, Ralph-Coop 2013,
-  Gómez 2016, Fenner 2005) resuelven correctamente en Crossref con título, año y
-  revista coincidentes.
+- **DOIs**: los 7 con DOI (Chang 1999, Rohde-Olson-Chang 2004, Ralph-Coop 2013,
+  Gómez 2016, Fenner 2005, Chagnon 1988, Anholt-Mackay 2012) resuelven
+  correctamente en Crossref con título, año y revista coincidentes.
 - **Robustez frente a parámetros**: la conclusión es estable para
   `p ∈ [10⁻⁴, 0.15]` (ver Tablas 1–3 y Fig. 3 del paper), por lo que el valor
   exacto de `p` no es crítico.

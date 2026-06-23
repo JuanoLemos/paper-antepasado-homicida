@@ -120,6 +120,31 @@ def prob_descends_from_killer_iap(p: float, pool_size: float) -> float:
     return prob_at_least_one_killer(p, pool_size)
 
 
+def chang_iap_generations(Ne: float, factor: float = 1.77) -> float:
+    """Generaciones hasta el punto de ancestros identicos (IAP) en una
+    poblacion cerrada bien mezclada de tamano efectivo Ne.
+
+    Chang (1999): el IAP esta a ~1.77 * log2(Ne) generaciones. En poblaciones
+    aisladas pequenas (islas, fundaciones por pocos colonos) Ne es pequeno y el
+    IAP llega en muy pocas generaciones (efecto fundador).
+    """
+    if Ne <= 1:
+        return 0.0
+    return factor * math.log2(Ne)
+
+
+def prob_descends_from_killer_closed(p: float, Ne: float) -> float:
+    """Caso de poblacion aislada (cerrada): pasado su IAP, el conjunto de
+    antepasados de ego es todo el acervo reproductor de tamano Ne. La
+    probabilidad de descender de al menos un homicida es 1 - (1-p)^Ne.
+
+    Es identico al argumento IAP global con pool = Ne; se expone aparte por
+    claridad para el analisis de poblaciones aisladas.
+    """
+    return prob_at_least_one_killer(p, Ne)
+
+
+
 if __name__ == "__main__":
     demo_p = [0.001, 0.01, 0.05, 0.15]
     print("Modelo ingenuo: P(ningun antepasado homicida)")

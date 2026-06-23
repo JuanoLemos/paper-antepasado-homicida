@@ -13,6 +13,7 @@ import numpy as np
 
 import model
 import population
+import simulate
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 FIGDIR = os.path.normpath(os.path.join(HERE, "..", "paper", "figures"))
@@ -84,11 +85,72 @@ def fig_sensitivity_heatmap() -> None:
     plt.close(fig)
 
 
+def fig_isolation() -> None:
+    """Poblaciones aisladas: (a) generacion del IAP vs tamano efectivo Ne
+    (Chang 1999); (b) fraccion con antepasado homicida vs generacion para
+    poblaciones cerradas de distinto tamano M (efecto fundador)."""
+    fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(9.4, 4.0))
+
+    Ne = np.logspace(1, 7, 200)
+    iap = [model.chang_iap_generations(float(n)) for n in Ne]
+    ax1.plot(Ne, iap, "-", linewidth=2.0)
+    ax1.set_xscale("log")
+    ax1.set_xlabel("Tamano efectivo de la poblacion $N_e$")
+    ax1.set_ylabel("Generaciones hasta el IAP")
+    ax1.set_title(r"IAP $\approx 1.77\,\log_2 N_e$ (Chang 1999)")
+    ax1.grid(True, which="both", alpha=0.3)
+    for n in (50, 1000, 1_000_000):
+        g = model.chang_iap_generations(float(n))
+        ax1.annotate(f"$N_e$={n:,}\n~{g:.0f} gen", xy=(n, g),
+                     xytext=(n, g + 4), fontsize=7, ha="center",
+                     arrowprops=dict(arrowstyle="->", lw=0.6))
+
+    G = 22
+    p = 0.01
+    for M in (50, 200, 5000):
+        frac = simulate.run_average(p, M, G, reps=30, base_seed=2024)
+        ax2.plot(range(G), frac, marker="o", markersize=3, label=f"M = {M}")
+    ax2.set_xlabel("Generaciones")
+    ax2.set_ylabel("Fraccion con antepasado homicida")
+    ax2.set_title(f"Efecto fundador (p = {p})")
+    ax2.grid(True, alpha=0.3)
+    ax2.legend(title="tamano isla")
+
+    fig.tight_layout()
+    fig.savefig(os.path.join(FIGDIR, "fig_isolation.pdf"))
+    plt.close(fig)
+
+
+def fig_heritability() -> None:
+    """Robustez a la independencia: fraccion con antepasado homicida vs
+    generacion para distintos niveles de heredabilidad/correlacion h
+    (prevalencia marginal p fija)."""
+    G = 30
+    p = 0.01
+    fig, ax = plt.subplots(figsize=(6.0, 4.0))
+    for h in (0.0, 0.3, 0.6, 0.9):
+        frac, _ = simulate.run_average_heritable(p, h, M=2000, G=G, reps=40,
+                                                  base_seed=777)
+        ax.plot(range(G), frac, marker="o", markersize=3, label=f"h = {h}")
+    ax.set_xlabel("Generaciones")
+    ax.set_ylabel("Fraccion con antepasado homicida")
+    ax.set_title(f"Robustez a la independencia (p = {p})")
+    ax.grid(True, alpha=0.3)
+    ax.legend(title="heredabilidad")
+    fig.tight_layout()
+    fig.savefig(os.path.join(FIGDIR, "fig_heritability.pdf"))
+    plt.close(fig)
+
+
+
+
 def main() -> None:
     ensure_dir()
     fig_naive_collapse()
     fig_pedigree_collapse()
     fig_sensitivity_heatmap()
+    fig_isolation()
+    fig_heritability()
     print(f"Figuras escritas en {FIGDIR}")
 
 
