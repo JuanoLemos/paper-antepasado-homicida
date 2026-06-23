@@ -6,6 +6,8 @@ punto de ancestros idénticos) con simulación Monte Carlo.*
 
 [![DOI](https://zenodo.org/badge/1277539649.svg)](https://doi.org/10.5281/zenodo.20806914)
 
+**Idiomas:** Español · [English](README.en.md)
+
 Preprint (estilo arXiv) que formaliza y cuantifica la siguiente afirmación:
 
 > Todo ser humano vivo tiene, con probabilidad esencialmente igual a 1, al menos
@@ -107,4 +109,4 @@ documenta en `EVIDENCE.md`.
 - [x] Verificación de fuentes (ver `EVIDENCE.md`)
 - [x] Empaquetado para publicación (licencias, `CITATION.cff`, `.zenodo.json`)
 - [x] Depósito en Zenodo + DOI: [10.5281/zenodo.20806914](https://doi.org/10.5281/zenodo.20806914)
-- [ ] Traducción al inglés
+- [x] Traducción al inglés (`paper/main-en.tex`, ver [README.en.md](README.en.md))
