@@ -4,6 +4,8 @@
 antepasado homicida. Argumento genealógico-probabilístico (colapso de pedigrí +
 punto de ancestros idénticos) con simulación Monte Carlo.*
 
+[![DOI](https://zenodo.org/badge/1277539649.svg)](https://doi.org/10.5281/zenodo.20806914)
+
 Preprint (estilo arXiv) que formaliza y cuantifica la siguiente afirmación:
 
 > Todo ser humano vivo tiene, con probabilidad esencialmente igual a 1, al menos
@@ -71,9 +73,8 @@ tectonic paper/main.tex
 Metadatos de cita en `CITATION.cff`. Cita sugerida:
 
 > Juan Manuel Lemos (2026), *Sobre la inevitabilidad de un antepasado homicida:
-> un argumento genealógico-probabilístico*. CC-BY-4.0.
-
-(El DOI definitivo se añadirá tras el depósito en Zenodo.)
+> un argumento genealógico-probabilístico*. Zenodo. CC-BY-4.0.
+> DOI: [10.5281/zenodo.20806914](https://doi.org/10.5281/zenodo.20806914)
 
 ## Disponibilidad de datos y código
 
@@ -105,5 +106,5 @@ documenta en `EVIDENCE.md`.
 - [x] Paper en español
 - [x] Verificación de fuentes (ver `EVIDENCE.md`)
 - [x] Empaquetado para publicación (licencias, `CITATION.cff`, `.zenodo.json`)
-- [ ] Depósito en Zenodo + DOI (Fase C)
+- [x] Depósito en Zenodo + DOI: [10.5281/zenodo.20806914](https://doi.org/10.5281/zenodo.20806914)
 - [ ] Traducción al inglés

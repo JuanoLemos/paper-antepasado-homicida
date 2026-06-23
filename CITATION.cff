@@ -22,5 +22,6 @@ keywords:
   - colapso de pedigri
   - violencia letal
   - ascendencia comun
-# TODO(Fase C): completar tras crear el repo en GitHub y obtener el DOI de Zenodo.
 repository-code: "https://github.com/JuanoLemos/paper-antepasado-asesino"
+doi: "10.5281/zenodo.20806914"
+url: "https://doi.org/10.5281/zenodo.20806914"
