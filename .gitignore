@@ -1,0 +1,26 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+
+# Datos generados (se versionan para que el archivo de Zenodo sea autocontenido)
+# code/output/*.csv
+
+# LaTeX intermedios
+paper/*.aux
+paper/*.log
+paper/*.out
+paper/*.toc
+paper/*.bbl
+paper/*.blg
+paper/*.synctex.gz
+paper/*.fls
+paper/*.fdb_latexmk
+
+# PDF compilado (se versiona para incluirlo en el release/Zenodo)
+# paper/main.pdf
+
+# Tectonic
+paper/*.tdsupgrade

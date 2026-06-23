@@ -1,0 +1,25 @@
+cff-version: 1.2.0
+message: "Si utilizas este trabajo, por favor citalo como se indica a continuacion."
+title: "Sobre la inevitabilidad de un antepasado homicida: un argumento genealogico-probabilistico"
+abstract: >-
+  Formaliza y cuantifica la probabilidad de que un ser humano vivo no tenga
+  ningun antepasado que haya causado la muerte de otro humano. Mediante el
+  crecimiento exponencial de antepasados, el colapso de pedigri y el punto de
+  ancestros identicos, se muestra que dicha probabilidad es indistinguible de
+  cero: es practicamente imposible no descender de al menos un homicida.
+type: software
+authors:
+  - family-names: "Lemos"
+    given-names: "Juan Manuel"
+version: "1.0.0"
+date-released: "2026-06-22"
+license: CC-BY-4.0
+keywords:
+  - genealogia
+  - probabilidad
+  - punto de ancestros identicos
+  - colapso de pedigri
+  - violencia letal
+  - ascendencia comun
+# TODO(Fase C): completar tras crear el repo en GitHub y obtener el DOI de Zenodo.
+repository-code: "https://github.com/JuanoLemos/paper-antepasado-asesino"

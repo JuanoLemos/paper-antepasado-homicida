@@ -1,0 +1,20 @@
+{
+  "title": "Sobre la inevitabilidad de un antepasado homicida: un argumento genealogico-probabilistico",
+  "description": "Formaliza y cuantifica la probabilidad de que un ser humano vivo no tenga ningun antepasado que haya causado la muerte de otro humano. Combina el crecimiento exponencial del numero de antepasados, el colapso de pedigri y el punto de ancestros identicos (Chang 1999; Rohde, Olson & Chang 2004) con estimaciones empiricas de violencia letal (Gomez et al. 2016) para mostrar que tal probabilidad es indistinguible de cero. Incluye codigo reproducible (Python) y una simulacion Monte Carlo.",
+  "upload_type": "publication",
+  "publication_type": "preprint",
+  "access_right": "open",
+  "license": "cc-by-4.0",
+  "language": "spa",
+  "creators": [
+    { "name": "Lemos, Juan Manuel" }
+  ],
+  "keywords": [
+    "genealogia",
+    "probabilidad",
+    "punto de ancestros identicos",
+    "colapso de pedigri",
+    "violencia letal",
+    "ascendencia comun"
+  ]
+}

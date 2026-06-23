@@ -1,0 +1,29 @@
+Creative Commons Attribution 4.0 International (CC-BY-4.0)
+SPDX-License-Identifier: CC-BY-4.0
+
+Copyright (c) 2026 Juan Manuel Lemos
+
+Esta obra ---el texto del articulo (paper/main.tex, paper/main.pdf), las
+figuras (paper/figures/) y los datos derivados--- se distribuye bajo la
+licencia Creative Commons Attribution 4.0 International.
+
+Eres libre de:
+  - Compartir: copiar y redistribuir el material en cualquier medio o formato.
+  - Adaptar: remezclar, transformar y construir a partir del material para
+    cualquier proposito, incluso comercial.
+
+Bajo la siguiente condicion:
+  - Atribucion: debes dar credito de manera adecuada, proporcionar un enlace a
+    la licencia e indicar si se realizaron cambios. Puedes hacerlo de cualquier
+    forma razonable, pero no de una que sugiera que tienes el apoyo del autor o
+    lo recibes por el uso que haces.
+
+Texto legal completo (vinculante):
+  https://creativecommons.org/licenses/by/4.0/legalcode
+
+Resumen legible:
+  https://creativecommons.org/licenses/by/4.0/
+
+Atribucion sugerida:
+  Juan Manuel Lemos (2026), "Sobre la inevitabilidad de un antepasado homicida:
+  un argumento genealogico-probabilistico". Licencia CC-BY-4.0.
